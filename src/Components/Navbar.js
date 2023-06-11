@@ -13,11 +13,11 @@ export default function Navbar() {
     <div class="navbar">
       <img src={logo} class="logo" alt="/" />
       <div class="elements">
-        <a href="/">MEN</a>
-        <a href="/">WOMEN</a>
-        <a href="/">KIDS</a>
-        <a href="/">HOME & LIVING</a>
-        <a href="/">BEAUTY</a>
+        <Link to="/">MEN</Link>
+        <Link to="/">WOMEN</Link>
+        <Link to="/">KIDS</Link>
+        <Link to="/">HOME & LIVING</Link>
+        <Link to="/">BEAUTY</Link>
       </div>
       <div className="right-navbar">
         <input type="text" class="search-bar" placeholder='Search for Products' />

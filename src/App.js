@@ -14,7 +14,11 @@ function App() {
   const handleCart=(e,element)=>{
     e.preventDefault();
     setItem([...item,element]);
-    console.log(item);
+}
+const handleRemove=(e,id)=>{
+  e.preventDefault();
+  const arr=item.filter((item)=>item.id!==id)
+  setItem(arr);
 }
   return (
     <div className="App">
@@ -22,7 +26,7 @@ function App() {
       <Context.Provider value={item}>
       <Navbar/>
       <Routes>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart removeElement={handleRemove}/>}/>
         <Route path="/" element={<Home handleCart={handleCart}/>}/>
       </Routes>
             <Info />
