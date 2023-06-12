@@ -1,7 +1,7 @@
 
 
 export default function Items({element,handleItem}){
-    const {id,image,title,description,price}=element;
+    const {image,title,description,price}=element;
     return(
         <div style={{border:'1px',borderStyle:'solid',height:'430px',width:'300px'}}>
             <img src={image} alt="items" style={{height:"230px",width:'300px'}}/>
