@@ -1,7 +1,7 @@
 
 
 export default function Items({element,handleItem}){
-    const {image,title,description,price}=element;
+    const {id,image,title,description,price}=element;
     return(
         <div style={{border:'1px',borderStyle:'solid',height:'430px',width:'300px'}}>
             <img src={image} alt="items" style={{height:"230px",width:'300px'}}/>
@@ -11,7 +11,7 @@ export default function Items({element,handleItem}){
                 <h4>${price}</h4>
             </div>
             <div>
-                <button style={{fontSize:'16px',height:'25px'}} href='/' alt='/' onClick={(e)=>{handleItem(e,element)}}>ADD to Cart</button>
+                <button style={{fontSize:'16px',height:'25px'}} href='/' alt='/' onClick={(e)=>{handleItem(e,element,id)}}>ADD to Cart</button>
             </div>
         </div>
     )
