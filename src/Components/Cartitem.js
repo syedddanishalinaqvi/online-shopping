@@ -1,5 +1,5 @@
-export default function Cartitem({value,cartItem,handleRemove,handleDecrease,handleIncrease}){
-    const {id,image,title,price}=cartItem;
+export default function Cartitem({cartItem,handleRemove,handleDecrease,handleIncrease}){
+    const {id,image,product,title,price}=cartItem;
     return(
         <div style={{border:'1px',borderStyle:'solid',margin:'30px',padding:'10px',display:'inline-block',height:'180px',width:'800px'}}>
             <img src={image} alt="items" style={{height:"120px",width:'300px'}}/>
@@ -8,7 +8,7 @@ export default function Cartitem({value,cartItem,handleRemove,handleDecrease,han
                 <h4>${price}</h4>
                 <div style={{display:"flex" }}>
                     <button onClick={()=>{handleDecrease(id)}} style={{height:'20px'}}>-</button>
-                    <h3 style={{marginTop:0,fontSize:'15px'}}>{value}</h3>
+                    <h3 style={{marginTop:0,fontSize:'15px'}}>{product}</h3>
                     <button onClick={()=>{handleIncrease(id)}} style={{float:'right', height:'20px'}} >+</button>
                 </div>
                 <div>
