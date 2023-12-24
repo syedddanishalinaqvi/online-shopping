@@ -10,7 +10,7 @@ export default function Cart({handleRemove,handleIncrease,handleDecrease}) {
 
   const totalAmount = () => {
     var newAmount = 0;
-    cartItem.map((element) => { return newAmount += element.price })
+    cartItem.map((element) => { return newAmount += (element.product*element.price) })
     setAmount(newAmount);
   }
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function Cart({handleRemove,handleIncrease,handleDecrease}) {
     <>
       {
         cartItem.map((element) => {
-          return (<div><Cartitem key={element.id} cartItem={element} handleRemove={handleRemove} handleDecrease={handleDecrease} handleIncrease={handleIncrease} />
+          return (<div key={element.id}><Cartitem cartItem={element} handleRemove={handleRemove} handleDecrease={handleDecrease} handleIncrease={handleIncrease} />
           </div>)
         })
       }

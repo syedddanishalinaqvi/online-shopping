@@ -7,7 +7,7 @@ export default function Items({element,handleItem}){
             <img src={image} alt="items" style={{height:"230px",width:'300px'}}/>
             <div className="detail" style={{margin:'2px'}}>
                 <h3>{title.slice(0,20)}</h3>
-                <h7>{description.slice(0,40)}</h7>
+                <p>{description.slice(0,40)}</p>
                 <h4>${price}</h4>
             </div>
             <div>

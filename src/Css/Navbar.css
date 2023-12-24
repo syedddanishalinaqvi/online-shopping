@@ -4,20 +4,20 @@
     border-bottom-width: 1px;
     background-color: white;
     top:0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
     position:sticky
 }
 .logo{
-    display:inline;
     height:100px;
     width:100px;
-    float:left;
     margin-left: 25px;
 }
 .elements{
-  margin-top:35px;
-  margin-left:35px;
-  float:left;
-  display:inline;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
 }
 a{
     text-decoration: none;
@@ -29,23 +29,23 @@ a{
     border-bottom:solid 3px;
     border-color: black;
 }
-.elements a{
-   display:inline;
-   padding:30px;
-   padding-top: 45px;
-   padding-bottom: 43px;
-   text-decoration: none;
+.elements>a{
    color:black;
    font-weight: bold;
    font-size: 14px;
-   text-align: center;
+}
+.right-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .search-bar{
-    margin:30px;
     width:500px;
     height: 35px;
     background-color: #f5f5f6;
     border:solid 1px;
+    border-radius: 10px;
+    padding-left:10px;
 }
 
 .user a img{
