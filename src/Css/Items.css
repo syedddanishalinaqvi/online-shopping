@@ -1,0 +1,21 @@
+.add-to-cart:hover{
+    background-color: white;
+    color:black;
+}
+.add-to-cart{
+    font-size:16px;
+    padding:10px;
+    border:1px solid;
+    border-radius:15px;
+    cursor:pointer;
+    background-color:black;
+    color:white;
+}
+.heart{
+    position:absolute;
+    top:0;
+    right:0px;
+    background-color:transparent;
+    cursor:pointer;
+    border:none;
+}

@@ -9,9 +9,9 @@ export default function Cart({handleRemove,handleIncrease,handleDecrease}) {
   const cartItem = useContext(Context);
 
   const totalAmount = () => {
-    var newAmount = 0;
+    let newAmount = 0;
     cartItem.map((element) => { return newAmount += (element.product*element.price) })
-    setAmount(newAmount);
+    setAmount(newAmount.toFixed(2));
   }
   useEffect(() => {
     totalAmount();

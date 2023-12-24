@@ -5,6 +5,7 @@
     background-color: white;
     top:0;
     display:flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     position:sticky
@@ -17,17 +18,12 @@
 .elements{
     display: flex;
     flex-direction: row;
-    justify-content:space-between;
+    width: 50%;
+    justify-content: space-between;
 }
 a{
     text-decoration: none;
     color:black;
-}
-.elements a:hover{
-    background-color: #7a7676;
-    color:white;
-    border-bottom:solid 3px;
-    border-color: black;
 }
 .elements>a{
    color:black;
@@ -39,15 +35,6 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-.search-bar{
-    width:500px;
-    height: 35px;
-    background-color: #f5f5f6;
-    border:solid 1px;
-    border-radius: 10px;
-    padding-left:10px;
-}
-
 .user a img{
     height:25px;
     width:25px;
@@ -57,10 +44,6 @@ a{
 }
 .wishlist img{
     margin-left:10px;
-}
-
-.right-navbar{
-    float: right;
 }
 a figcaption{
     font-weight: bold;
