@@ -2,10 +2,11 @@ import { useState } from 'react';
 import './App.css';
 import Cart from './Components/Cart';
 import Home from './Components/Home';
-import Info from './Components/Info';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Context from './Components/Context';
+import Men from './Components/Men';
+import Women from './Components/Women';
 
 function App() {
   const [item, setItem] = useState([]);
@@ -60,8 +61,9 @@ function App() {
           <Routes>
             <Route path="/cart" element={<Cart handleRemove={handleRemove} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />} />
             <Route path="/" element={<Home handleCart={handleCart} />} />
+            <Route path="/men" element={<Men handleCart={handleCart} />} />
+            <Route path="/women" element={<Women handleCart={handleCart} />} />
           </Routes>
-          <Info />
         </Context.Provider>
       </BrowserRouter>
     </div>

@@ -11,6 +11,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.menu{
+    display: none;
+}
 .logo{
     height:100px;
     width:100px;
@@ -59,6 +62,16 @@ a figcaption{
 .user{
     float:right;
     margin:30px;
+}
+
+@media screen and (max-width:640px) {
+    .menu{
+        display:block;
+        margin-left:25px;
+    }
+    .elements{
+        display:none;
+    }
 }
 
 

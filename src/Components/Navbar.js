@@ -1,19 +1,24 @@
 import React from 'react'
 import '../Css/Navbar.css'
 import logo from '../Images/logo.png'
+import menu from '../Images/menu.png'
 import wishlist from '../Images/wishlist.png'
 import cart from '../Images/cart.png'
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Navbar() {
 
   return (
     <div className="navbar">
-      <img src={logo} className="logo" alt="/" />
+      <div className="menu">
+        <img style={{height:"35px",width:"35px"}} src={menu} alt="menu"/>
+        <div className="menu-content"></div>
+      </div>
+      <Link to="/"><img src={logo} className="logo" alt="/" /></Link>
       <div className="elements">
-        <Link to="/"><p>MEN</p></Link>
-        <Link to="/"><p>WOMEN</p></Link>
+        <Link to="/men"><p>MEN</p></Link>
+        <Link to="/women"><p>WOMEN</p></Link>
         <Link to="/"><p>JEWELLERY</p></Link>
         <Link to="/"><p>ELECTRONICS</p></Link>
       </div>
