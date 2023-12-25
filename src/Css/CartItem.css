@@ -1,0 +1,15 @@
+.cart-item{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    width:800px;
+    margin-bottom: 40px;
+
+}
+@media screen and (max-width:900px) {
+    .cart-item{
+        flex-direction:column;
+        flex-wrap:wrap;
+    }
+}

@@ -1,4 +1,6 @@
 .navbar{
+    position: sticky;
+    z-index: 1;
     height:100px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
@@ -8,7 +10,6 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    position:sticky
 }
 .logo{
     height:100px;

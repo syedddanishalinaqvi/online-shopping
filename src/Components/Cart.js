@@ -17,15 +17,15 @@ export default function Cart({handleRemove,handleIncrease,handleDecrease}) {
     totalAmount();
   })
   return (
-    <>
+    <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+      <div style={{fontSize: '18px',padding:"40px"}}>{cartItem.length===0?<b>YOUR CART IS EMPTY 😢</b>:<b>Total Amount: ${amount}</b>}</div>
       {
         cartItem.map((element) => {
-          return (<div key={element.id}><Cartitem cartItem={element} handleRemove={handleRemove} handleDecrease={handleDecrease} handleIncrease={handleIncrease} />
-          </div>)
+          return (<Cartitem key={element.id} cartItem={element} handleRemove={handleRemove} handleDecrease={handleDecrease} handleIncrease={handleIncrease} />)
         })
       }
-      <div style={{ fontSize: '18px', marginLeft: '40px' }}>Total Amount: {amount}</div>
-    </>
+  
+    </div>
 
   )
 }
