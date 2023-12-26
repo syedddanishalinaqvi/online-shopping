@@ -19,8 +19,8 @@ export default function Navbar() {
       <div className="elements">
         <Link to="/men"><p>MEN</p></Link>
         <Link to="/women"><p>WOMEN</p></Link>
-        <Link to="/"><p>JEWELLERY</p></Link>
-        <Link to="/"><p>ELECTRONICS</p></Link>
+        <Link to="/jewellery"><p>JEWELLERY</p></Link>
+        <Link to="/electronics"><p>ELECTRONICS</p></Link>
       </div>
       <div className="right-navbar">
         <div className="user">

@@ -1,15 +1,13 @@
 import React from 'react'
 import Items from './Items'
-import Data from './Data'
 
-const Men = ({handleCart}) => {
-    const menData=Data.filter(item=>item.category==="men's clothing");
+const Categories = ({handleCart,data}) => {
   return (
     <div>
-            <h1 style={{textAlign:"center",fontSize:"40px",letterSpacing:"4px"}}>MEN's CLOTHINGS</h1>
+            <h1 style={{textAlign:"center",fontSize:"40px",letterSpacing:"4px"}}>{data[0].category.toUpperCase()}</h1>
         <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",justifyContent:"space-around"}}>
             {
-                menData.map((element) => {
+                data.map((element) => {
                     return <Items key={element.id} element={element} handleItem={handleCart} />
                 })
             }
@@ -18,4 +16,4 @@ const Men = ({handleCart}) => {
   )
 }
 
-export default Men
+export default Categories

@@ -5,11 +5,15 @@ import Home from './Components/Home';
 import Navbar from './Components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Context from './Components/Context';
-import Men from './Components/Men';
-import Women from './Components/Women';
+import Data from './Components/Data';
+import Categories from './Components/Categories';
 
 function App() {
   const [item, setItem] = useState([]);
+  const WomenData=Data.filter(item=>item.category==="women's clothing");
+  const MenData=Data.filter(item=>item.category==="men's clothing");
+  const Jwellery=Data.filter(item=>item.category==="jewelery");
+  const Electronics=Data.filter(item=>item.category==="electronics");
 
   const handleCart =(e, element,id) => {
     e.preventDefault();
@@ -61,8 +65,10 @@ function App() {
           <Routes>
             <Route path="/cart" element={<Cart handleRemove={handleRemove} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />} />
             <Route path="/" element={<Home handleCart={handleCart} />} />
-            <Route path="/men" element={<Men handleCart={handleCart} />} />
-            <Route path="/women" element={<Women handleCart={handleCart} />} />
+            <Route path="/men" element={<Categories handleCart={handleCart} data={MenData}/>} />
+            <Route path="/women" element={<Categories handleCart={handleCart} data={WomenData} />} />
+            <Route path="/jewellery" element={<Categories handleCart={handleCart} data={Jwellery} />} />
+            <Route path="/electronics" element={<Categories handleCart={handleCart} data={Electronics} />} />
           </Routes>
         </Context.Provider>
       </BrowserRouter>

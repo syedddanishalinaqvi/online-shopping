@@ -14,7 +14,7 @@ export default function Cartitem({cartItem,handleRemove,handleDecrease,handleInc
                     <button onClick={()=>{handleIncrease(id)}} style={{backgroundColor:"white",border:"1px solid",height:"30px",width:"30px",cursor:"pointer"}} >+</button>
                 </div>
                 <div>
-                <button onClick={(e)=>{handleRemove(e,id)}}>Remove</button>
+                <button style={{backgroundColor:"white",border:"1px solid",height:"30px",width:"70px",cursor:"pointer"}} onClick={(e)=>{handleRemove(e,id)}}>Remove</button>
                 </div>
             </div>
         </div>
