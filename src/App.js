@@ -69,9 +69,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Context.Provider value={{item,setMenuBar}}>
+        <Context.Provider value={item}>
           <MenuLeft menubar={menuBar}/>
-          <Navbar handleMenu={handleMenu}/>
+          <Navbar handleMenu={handleMenu} value={menuBar}/>
           <Routes>
             <Route path="/cart" element={<Cart handleRemove={handleRemove} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />} />
             <Route path="/" element={<Home handleCart={handleCart} />} />

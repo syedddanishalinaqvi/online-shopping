@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Css/Navbar.css'
 import logo from '../Images/logo.png'
+import close from '../Images/close.png'
 import menu from '../Images/menu.png'
 import wishlist from '../Images/wishlist.png'
 import cart from '../Images/cart.png'
@@ -8,11 +9,11 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function Navbar({handleMenu}) {
+export default function Navbar({handleMenu,value}) {
   return (
     <div className="navbar">
       <div className="menu">
-        <img onClick={handleMenu} style={{height:"35px",width:"35px"}} src={menu} alt="menu"/>
+        <img onClick={handleMenu} style={{height:"35px",width:"35px"}} src={value==="50%"?close:menu} alt="menu"/>
       </div>
       
       <Link to="/"><img src={logo} className="logo" alt="/" /></Link>
