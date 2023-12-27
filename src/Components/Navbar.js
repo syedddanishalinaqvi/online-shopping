@@ -7,14 +7,14 @@ import cart from '../Images/cart.png'
 import { Link } from 'react-router-dom';
 
 
-export default function Navbar() {
 
+export default function Navbar({handleMenu}) {
   return (
     <div className="navbar">
       <div className="menu">
-        <img style={{height:"35px",width:"35px"}} src={menu} alt="menu"/>
-        <div className="menu-content"></div>
+        <img onClick={handleMenu} style={{height:"35px",width:"35px"}} src={menu} alt="menu"/>
       </div>
+      
       <Link to="/"><img src={logo} className="logo" alt="/" /></Link>
       <div className="elements">
         <Link to="/men"><p>MEN</p></Link>
@@ -26,11 +26,9 @@ export default function Navbar() {
         <div className="user">
           <a href="/" alt="/" className="wishlist">
             <img src={wishlist} className="account" alt="account" />
-            <figcaption>WishList</figcaption>
           </a>
           <Link to="/cart" alt="/" className="cart">
             <img src={cart} className="account" alt="account" />
-            <figcaption>Cart</figcaption>
           </Link>
         </div>
       </div>

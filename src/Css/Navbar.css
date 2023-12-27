@@ -39,15 +39,12 @@ a{
     align-items: center;
     justify-content: space-between;
 }
-.user a img{
+.user>a>img{
     height:25px;
     width:25px;
 }
-.profile img{
-    margin-left:6px;
-}
 .wishlist img{
-    margin-left:10px;
+    margin-right:10px;
 }
 a figcaption{
     font-weight: bold;
@@ -60,7 +57,6 @@ a figcaption{
    margin-right:10px;
 }
 .user{
-    float:right;
     margin:30px;
 }
 
@@ -71,6 +67,16 @@ a figcaption{
     }
     .elements{
         display:none;
+    }
+    .user >a{
+        display:inline-block;
+     }
+     .user{
+        margin:10px;
+    }
+    .user>a>img{
+        height:20px;
+        width:20px;
     }
 }
 

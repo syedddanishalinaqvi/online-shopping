@@ -3,17 +3,26 @@ import './App.css';
 import Cart from './Components/Cart';
 import Home from './Components/Home';
 import Navbar from './Components/Navbar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Context from './Components/Context';
 import Data from './Components/Data';
 import Categories from './Components/Categories';
+import MenuLeft from './Components/MenuLeft';
 
 function App() {
   const [item, setItem] = useState([]);
+  const [menuBar,setMenuBar]=useState("-50%");
   const WomenData=Data.filter(item=>item.category==="women's clothing");
   const MenData=Data.filter(item=>item.category==="men's clothing");
   const Jwellery=Data.filter(item=>item.category==="jewelery");
   const Electronics=Data.filter(item=>item.category==="electronics");
+
+  const handleMenu=()=>{
+    if(menuBar==="-50%"){
+      setMenuBar("50%");
+    }
+    else setMenuBar("-50%");
+  }
 
   const handleCart =(e, element,id) => {
     e.preventDefault();
@@ -60,8 +69,9 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Context.Provider value={item}>
-          <Navbar />
+        <Context.Provider value={{item,setMenuBar}}>
+          <MenuLeft menubar={menuBar}/>
+          <Navbar handleMenu={handleMenu}/>
           <Routes>
             <Route path="/cart" element={<Cart handleRemove={handleRemove} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />} />
             <Route path="/" element={<Home handleCart={handleCart} />} />
