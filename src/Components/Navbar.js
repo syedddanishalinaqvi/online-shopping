@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 
 
-export default function Navbar({handleMenu,value}) {
+export default function Navbar({handleMenu,value,cartNumber}) {
   return (
     <div className="navbar">
       <div className="menu">
@@ -28,8 +28,9 @@ export default function Navbar({handleMenu,value}) {
           <a href="/" alt="/" className="wishlist">
             <img src={wishlist} className="account" alt="account" />
           </a>
-          <Link to="/cart" alt="/" className="cart">
+          <Link to="/cart" alt="/" className="cart" style={{position:"relative"}}>
             <img src={cart} className="account" alt="account" />
+            <p style={{position:"absolute",right:"-7px",top:"2px"}}>{cartNumber}</p>
           </Link>
         </div>
       </div>
